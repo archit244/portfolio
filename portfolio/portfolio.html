@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(90deg,#667eea,#6d4e8c);
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    line-height:1.6;
+}
+.navbar{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px 50px;
+    position: fixed;
+    z-index:5;
+    backdrop-filter:blur(10px) ;
+}
+.nav-link {
+    display:flex;
+    gap:30px;
+}
+.nav-link a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+}
+.nav-head{
+    font-size:32px;
+    font-weight: bold;
+}
+.sec-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    min-height:100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 150px;
+}
+.profile-title{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.profile-subtitle{
+    font-size:1.5rem;
+    margin-bottom: 30px;
+}
+.highlight{
+    color:gold;
+}
+.btn{
+    padding: 15px 30px;
+    background: linear-gradient(45deg,#ff8a00,#e52e71);
+    border-radius: 50px;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.home-image{
+    height:100%;
+    width:100%;
+    margin-right:150px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius:30px;
+    overflow: hidden;
+}
+.image-container{
+    height:400px;
+    width:400px;
+}
+.sec-2{
+    display: flex;
+    justify-items: center;
+    min-height:100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.About-content{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-title{
+    font-size: 50px;
+}
+.about-barline{
+    height:10px;
+    width:150px;
+    background: linear-gradient(45deg,#ff8a00,#e52e71);
+    border-radius: 50px;
+}
+.about-subcontent{
+    padding: 10px;
+    margin:5px;
+}
+.about-subcontent_1{
+    margin:20px;
+    font-size: 25px;
+    line-height: 1.3;
+}
+.about-subcontent_2{
+    margin:20px;
+    font-size: 25px;
+}
+.work-content{
+    margin:20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.workcards1, .workcards2, .workcards3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:200px;
+    background-color:rgba(255,255,255,0.1);
+    border-radius:20px;
+    border:3px solid rgba(255,255,255,0.1);
+}
+.workcards2, .workcards3{
+    border:3px solid rgba(255,255,255,0.3);
+}
+.work-no{
+    color:yellow;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.work-about{
+    font-size: 25px;
+}
+
+/* --- Animation Section --- */
+@keyframes upAppear {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.animate-up {
+    opacity: 0;
+    animation: upAppear 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 0s;
+}
+.animate-fade {
+    opacity: 0;
+    animation: fadeAppear 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 0s;
+}
+.delay-1 {
+    animation-delay: 0.4s !important;
+}
+.delay-2 {
+    animation-delay: 0.8s !important;
+}
+.delay-3 {
+    animation-delay: 1.2s !important;
+}</style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-head">Portfolio</div>
+      <div class="nav-link">
+        <a href="#home"> Home</a>
+        <a href="#about">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div id="home" class="sec-1">
+      <div class="home-content">
+        <h1 class="profile-title animate-up">Hi I'm <span class="highlight">Unknown</span></h1>
+        <p class="profile-subtitle animate-up delay-1">
+          A Frontend Developer exploring the world of design and open-source.
+          Turning ideas into interactive, user-friendly web applications.
+        </p>
+        <button class="btn animate-up delay-2">Veiw My Work</button>
+      </div>
+      <div class="image-container">
+        <div class="home-image animate-fade delay-3">
+          <img src="./pic.jpeg" alt="passportsize-photo" />
+        </div>
+      </div>
+    </div>
+    <div id="about" class="sec-2 ">
+        <div class="About-content">
+            <h1 class="about-title">About Me</h1>
+            <div class="about-barline"></div>
+            <div class="about-subcontent">
+                <p class="about-subcontent_1">I'm a creative and detail-oriented web developer with a passion for building modern,resposive,and user-friendly web applications. I love transforming ideas into digital experiences that are both visually appealing and highly functional.</p>
+                <p class="about-subcontent_2">Beyond coding,I enjoy exploring new technologies,contributing to open-source projects,and continuously I mproving my problem-solving skills.</p>
+                <div class="work-content">
+                    <div class="workcards1">
+                        <div class="work-no">20+</div>
+                        <div class="work-about">Projects Completed</div>
+                    </div>
+                    <div class="workcards2">
+                        <div class="work-no">4+</div>
+                        <div class="work-about">Years of Experience</div>
+                    </div>
+                    <div class="workcards3">
+                        <div class="work-no">10+</div>
+                        <div class="work-about">Technologies Mastered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Projects" class="sec-3 "></div>
+    <div id="contact" class="sec-4 "></div>
+  </body>
+</html>
